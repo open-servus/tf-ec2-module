@@ -1,7 +1,7 @@
 
 resource "aws_eip" "main" {
   instance = aws_instance.main.id
-  vpc      = true
+  domain   = "vpc"
 
   tags = {
     Name        = "${var.project_name}-${var.environment}"
